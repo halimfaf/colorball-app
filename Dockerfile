@@ -1,4 +1,4 @@
-FROM --platform=amd64 nginx:mainline-alpine 
+FROM nginx:mainline-alpine 
 RUN rm /etc/nginx/conf.d/*
 
 ADD html /usr/share/nginx/html
