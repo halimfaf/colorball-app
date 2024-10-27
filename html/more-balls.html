@@ -166,6 +166,18 @@
             -moz-box-shadow: 0 0 1px rgba(0, 0, 0, .75);
             box-shadow: 0 0 1px rgba(0, 0, 0, .75);
         }
+
+        td.big-title {
+            max-width: 105px;
+            
+        }
+        td.last-row {
+            border-bottom: 1px solid black;
+        }
+        table {
+            border-spacing: 10px;
+            text-align: left;
+        }
     </style>
     <script>
 
@@ -213,30 +225,132 @@
 <body style="background: {{ color }};">
     <div id="IMGLoad">
         <div><h1>Available Options</h1></div>
-        <div>Default (300 balls): <a href="/">LINK</a></div>
-        <div>760 balls (best fit for 2048x1280 screen resolution): <a href="/2048x1280">LINK</a></div>
-        <div>2664 balls (best fit for 3840x2160 screen resolution): <a href="/3840x2160">LINK</a></div>
         <div>
-            <b>Quick test:</b>
-            <img onload='imageLoadTime()' height='48' width='48' src='./img/image_part_0' />
-        </div>
-    </div>
-    <div id="IMGLoad">
-        <div><h1>Microservices Options (3 backend)</h1></div>
-        <div>Default (300 balls): <a href="/micro-default">LINK</a></div>
-        <div>760 balls (best fit for 2048x1280 screen resolution): <a href="/micro-2048x1280">LINK</a></div>
-        <div>2664 balls (best fit for 3840x2160 screen resolution): <a href="/micro-3840x2160">LINK</a></div>
-        <div>
-            <b>Quick test (Service 1):</b>
-            <img onload='imageLoadTime()' height='48' width='48' src='./svc1/img/image_part_0' />
-        </div>
-        <div>
-            <b>Quick test (Service 2):</b>
-            <img onload='imageLoadTime()' height='48' width='48' src='./svc2/img/image_part_0' />
-        </div>
-        <div>
-            <b>Quick test (Service 3):</b>
-            <img onload='imageLoadTime()' height='48' width='48' src='./svc3/img/image_part_0' />
+            <table>
+                <tr>
+                    <th>Options</th>
+                    <th>Quick Test</th>
+                    <th>Available Page</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td class="last-row" colspan="4"></td>
+                </tr>
+                <tr>
+                    <td class="big-title" rowspan="3">Basic <br/>(Single Ball or Ball GW)</td>
+                    <td rowspan="3" >
+                        <img onload='imageLoadTime()' height='48' width='48' src='./img/image_part_0' />
+                    </td>
+                    <td>Default (300 balls)</td>
+                    <td><a href="/">LINK</a></td>
+                </tr>
+                <tr>
+                    <td>760 balls (best fit for 2048x1280 screen resolution)</td>
+                    <td><a href="/2048x1280">LINK</a></td>
+                </tr>
+                <tr>
+                    <td>2664 balls (best fit for 3840x2160 screen resolution)</td>
+                    <td><a href="/3840x2160">LINK</a></td>
+                </tr>
+                <tr>
+                    <td class="last-row" colspan="4"></td>
+                </tr>
+                <tr>
+                    <td class="big-title" rowspan="3">Microservices <br/>(Load Balance with Failure Handling)</td>
+                    <td rowspan="3" >
+                        None
+                    </td>
+                    <td>Default (300 balls)</td>
+                    <td><a href="/micro-default">LINK</a></td>
+                </tr>
+                <tr>
+                    <td>760 balls (best fit for 2048x1280 screen resolution)</td>
+                    <td><a href="/micro-2048x1280">LINK</a></td>
+                </tr>
+                <tr>
+                    <td>2664 balls (best fit for 3840x2160 screen resolution)</td>
+                    <td><a href="/micro-3840x2160">LINK</a></td>
+                </tr>
+                <tr>
+                    <td class="last-row" colspan="4"></td>
+                </tr>
+                <tr>
+                    <td class="big-title" rowspan="3">Microservices <br/>(Svc1 only)</td>
+                    <td rowspan="3" >
+                        <img onload='imageLoadTime()' height='48' width='48' src='./svc1/img/image_part_0' />
+                    </td>
+                    <td>Default (300 balls)</td>
+                    <td><a href="/svc1-default">LINK</a></td>
+                </tr>
+                <tr>
+                    <td>760 balls (best fit for 2048x1280 screen resolution)</td>
+                    <td><a href="/svc1-2048x1280">LINK</a></td>
+                </tr>
+                <tr>
+                    <td>2664 balls (best fit for 3840x2160 screen resolution)</td>
+                    <td><a href="/svc1-3840x2160">LINK</a></td>
+                </tr>
+                <tr>
+                    <td class="last-row" colspan="4"></td>
+                </tr>
+                <tr>
+                    <td class="big-title" rowspan="3">Microservices <br/>(Svc2 only)</td>
+                    <td rowspan="3" >
+                        <img onload='imageLoadTime()' height='48' width='48' src='./svc2/img/image_part_0' />
+                    </td>
+                    <td>Default (300 balls)</td>
+                    <td><a href="/svc2-default">LINK</a></td>
+                </tr>
+                <tr>
+                    <td>760 balls (best fit for 2048x1280 screen resolution)</td>
+                    <td><a href="/svc2-2048x1280">LINK</a></td>
+                </tr>
+                <tr>
+                    <td>2664 balls (best fit for 3840x2160 screen resolution)</td>
+                    <td><a href="/svc2-3840x2160">LINK</a></td>
+                </tr>
+                <tr>
+                    <td class="last-row" colspan="4"></td>
+                </tr>
+                <tr>
+                    <td class="big-title" rowspan="3">Microservices <br/>(Svc3 only)</td>
+                    <td rowspan="3" >
+                        <img onload='imageLoadTime()' height='48' width='48' src='./svc3/img/image_part_0' />
+                    </td>
+                    <td>Default (300 balls)</td>
+                    <td><a href="/svc3-default">LINK</a></td>
+                </tr>
+                <tr>
+                    <td>760 balls (best fit for 2048x1280 screen resolution)</td>
+                    <td><a href="/svc3-2048x1280">LINK</a></td>
+                </tr>
+                <tr>
+                    <td>2664 balls (best fit for 3840x2160 screen resolution)</td>
+                    <td><a href="/svc3-3840x2160">LINK</a></td>
+                </tr>
+                <tr>
+                    <td class="last-row" colspan="4"></td>
+                </tr>
+                <tr>
+                    <td class="big-title" rowspan="3">Microservices <br/>(Load Balance without Failure Handling)</td>
+                    <td rowspan="3" >
+                        None
+                    </td>
+                    <td>Default (300 balls)</td>
+                    <td><a href="/microfail-default">LINK</a></td>
+                </tr>
+                <tr>
+                    <td>760 balls (best fit for 2048x1280 screen resolution)</td>
+                    <td><a href="/microfail-2048x1280">LINK</a></td>
+                </tr>
+                <tr>
+                    <td>2664 balls (best fit for 3840x2160 screen resolution)</td>
+                    <td><a href="/microfail-3840x2160">LINK</a></td>
+                </tr>
+                <tr>
+                    <td class="last-row" colspan="4"></td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
